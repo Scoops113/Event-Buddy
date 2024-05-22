@@ -13,11 +13,11 @@ EventBuddy aims to make socializing easier by providing a platform where users c
 ## Features
 
 - User registration and login
-- Profile creation and customization
+- Profile creation
 - Activity search and filtering
 - Activity posting and management
 - Personalized activity suggestions
-- Messaging and notifications
+
 
 ## Screenshot
 
