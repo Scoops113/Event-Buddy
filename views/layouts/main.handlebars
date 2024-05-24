@@ -5,22 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Buddy</title>
+  <link rel="stylesheet" href="/css/jass.css">
 </head>
 
 <body>
   <header class="display-flex justify-space-between align-center p-2">
     <nav>
       <button class="btn" id="home">Home</button>
+      {{#if logged_in}}
+          <button class="btn" id="logout">logout</button>
+      {{else}}
+          <button class="btn" id="login">login</button>
+      {{/if}}
     </nav>
     <h1>
       EventBuddy
     </h1>
   </header>
   <main class="container container-fluid mt-5">
-    Body Here
+    {{{ body }}}
   </main>
   <footer>
       
   </footer>
+
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+  {{else}}
+    <script src="/js/login.js"></script>
+  {{/if}}
 
 </body>
