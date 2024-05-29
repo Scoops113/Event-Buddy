@@ -29,3 +29,7 @@ const signupInstead = (event) => {
 document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 
 document.querySelector('#signup-instead').addEventListener('click',  signupInstead);
+
+document.getElementById('post-activity').addEventListener('click', function() {
+  $('#postActivityModal').modal('show');
+});

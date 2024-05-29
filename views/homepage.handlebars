@@ -36,38 +36,72 @@
                 </div>
             </div>
             <div class="col-md-4 mb-3">
-      <div class="card bg-warning">
-        <div class="card-body">
-            <h5 class="card-title">Get Suggestions</h5>
-
-            <div class="card bg-lightblue text-white">
-               <div class="card-body" id="chat-box">
-                  <div class="chat-message bot-message text-dark"> 
-                    <span class="message">Event Bot ✌🏼</span>
-                  </div>
-               </div>
-            </div>
-                    <div class="input-group mt-3">
-                        <input type="text" id="user-input" class="form-control" placeholder="Type a message...">
-                        <div class="input-group-append">
-                            <button id="send-btn" class="btn btn-primary">Send</button>
+                <div class="card bg-warning">
+                    <div class="card-body">
+                        <h5 class="card-title">Get Suggestions</h5>
+                        <div class="card bg-lightblue text-white">
+                            <div class="card-body" id="chat-box">
+                                <div class="chat-message bot-message text-dark"> 
+                                    <span class="message">Event Bot ✌🏼</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mt-3">
+                            <input type="text" id="user-input" class="form-control" placeholder="Type a message...">
+                            <div class="input-group-append">
+                                <button id="send-btn" class="btn btn-primary">Send</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
         </div>
      </div>
-   </div>
 
-        <main>
-            {{{body}}}
-        </main>
-    </div>
+    <main>
+        {{{body}}}
+    </main>
 
     <footer class="bg-danger text-white text-center py-2 fixed-bottom">
         <p>&copy; 2024 EventBuddy. All rights reserved.</p>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="postActivityModal" tabindex="-1" aria-labelledby="postActivityModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="postActivityModalLabel"><b>Tell others about your activity</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="activityName" placeholder="Name of Activity">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="activityDate" placeholder="Date">
+                        </div>
+                        <div class="form-group">
+                            <input type="time" class="form-control" id="activityTime" placeholder="Time">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="activityPlace" placeholder="Place">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="activityDescription" rows="3" placeholder="Description"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Activity</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -75,17 +109,14 @@
     <script src="/js/chatbox.js"></script> 
     <script>
         document.getElementById('post-activity').addEventListener('click', function() {
-            
-            alert('Post an activity feature coming soon!');
+            $('#postActivityModal').modal('show');
         });
 
         document.getElementById('search-activities').addEventListener('input', function() {
-            
             console.log('Searching for activities:', this.value);
         });
 
         document.getElementById('suggest-activities').addEventListener('input', function() {
-            
             console.log('Getting suggestions:', this.value);
         });
     </script>
