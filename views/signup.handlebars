@@ -1,18 +1,61 @@
-<h2>Sign Up</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | EventBuddy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger fixed-top">
+        <a class="navbar-brand text-warning " href="#" style="font-size: 50px;">
+            <img src="img/eventbuddy.jpg" class="img-fluid" style="width: 80px;">
+            Event Buddy
+        </a>
+    </nav>
 
-<form class="form signup-form">
-  <div class="form-group">
-    <label for="email-login">username:</label>
-    <input class="form-input" type="text" id="username-login" />
-  </div>
-  <div class="form-group">
-    <label for="password-login">password:</label>
-    <input class="form-input" type="password" id="password-login" />
-  </div>
-  <div class="form-group">
-    <button class="btn btn-primary" type="submit">Sign Up!</button>
-  </div>
-  <button id="login-instead">Log In instead</button>
-</form>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-warning">
+                    <div class="card-body">
+                        <h2 class="text-center">Sign Up</h2>
+                        <form class="form signup-form">
+                            <div class="form-group">
+                                <label for="username-signup">Username:</label>
+                                <input class="form-control" type="text" id="username-signup" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email-signup">Email:</label>
+                                <input class="form-control" type="email" id="email-signup" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password-signup">Password:</label>
+                                <input class="form-control" type="password" id="password-signup" />
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type="submit">Sign Up!</button>
+                            </div>
+                        </form>
+                        <button class="btn btn-block btn-link" id="login-instead" onclick="redirectToLoginPage()">Login instead</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script src="/js/signup.js"></script>
+    <footer class="bg-danger text-white text-center py-2 fixed-bottom">
+        <p>&copy; 2024 EventBuddy. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <script>
+        function redirectToLoginPage() {
+            window.location.href = "login";
+        }
+    </script>
+</body>
+</html>
+
