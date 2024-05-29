@@ -23,8 +23,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const messageElement = document.createElement('div');
         messageElement.classList.add('chat-message', messageType);
         messageElement.innerHTML = `<span class="message">${message}</span>`;
+        
+        
+        if (messageType === 'user-message') {
+            messageElement.classList.add('bg-lightblue', 'text-white'); 
+        } else if (messageType === 'bot-message') {
+            messageElement.classList.add('bg-lightgray', 'text-dark'); 
+        }
+        
         chatBox.appendChild(messageElement);
         chatBox.scrollTop = chatBox.scrollHeight;
     }
+    
 });
 
