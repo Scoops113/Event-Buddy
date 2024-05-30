@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Annual Conference",
+    "date": "2024-06-20",
+    "time": "09:00:00",
+    "location": "Conference Hall A",
+    "description": "A gathering of industry professionals to discuss trends.",
+    "user_id": 1
+  },
+  {
+    "name": "Monthly Meetup",
+    "date": "2024-07-15",
+    "time": "18:00:00",
+    "location": "Local Community Center",
+    "description": "Monthly meetup for local community members.",
+    "user_id": 2
+  },
+  {
+    "name": "Webinar on Data Science",
+    "date": "2024-08-10",
+    "time": "11:00:00",
+    "location": "Online",
+    "description": "An online webinar covering the basics of data science.",
+    "user_id": 3
+  },
+  {
+    "name": "Charity Gala",
+    "date": "2024-09-05",
+    "time": "19:00:00",
+    "location": "Grand Ballroom",
+    "description": "A charity event to raise funds for local schools.",
+    "user_id": 1
+  },
+  {
+    "name": "Startup Pitch Night",
+    "date": "2024-10-12",
+    "time": "17:00:00",
+    "location": "Tech Hub Auditorium",
+    "description": "An event for startups to pitch their ideas to investors.",
+    "user_id": 2
+  }
+]
