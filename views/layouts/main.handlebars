@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/chatbox.css">
   <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,14 +29,15 @@
   <main class="container-fluid mt-5 pt-5">
     {{{ body }}}
   </main>
-  <footer>
-      
+  <footer class="bg-danger text-white text-center py-2 fixed-bottom">
+        <p>&copy; 2024 EventBuddy. All rights reserved.</p>
   </footer>
 
   {{#if logged_in}}
     <script src="/js/logout.js"></script>
-  {{else}}
-    <script src="/js/login.js"></script>
   {{/if}}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>

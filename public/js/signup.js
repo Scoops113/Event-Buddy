@@ -2,8 +2,8 @@ const signupFormHandler = async (event) => {
     event.preventDefault();
   
     //Get user input values
-    const name = document.querySelector('#username-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
+    const name = document.querySelector('#username-signup').value.trim();
+    const password = document.querySelector('#password-signup').value.trim();
   
     if (name && password) {
       // Call the signup route with the user input provided
