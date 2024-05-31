@@ -15,54 +15,68 @@ body {
 
 .chat-box {
     overflow-y: auto; /* Add scroll bars when needed */
-    height: calc(100% - 40px); /* Calculate height to accommodate padding */
+    height: 300px;
+    width: 400px;
     padding: 0 10px;
 }
 
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+    margin-left: auto;
+}
+.chat-box {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+    overflow-y: auto;
+    }
 .chat-message {
-    margin-bottom: 10px;
+    margin-bottom: 1em;
 }
-
 .bot-message {
-    background-color: #f0f0f0;
-    padding: 8px 12px;
-    border-radius: 10px;
-    display: inline-block;
+    background-color: #F1F1F1;
+    padding: 0.5em;
+    border-radius: 5px;
 }
-
 .user-message {
-    background-color: #007bff;
+    background-color: #007BFF;
     color: #fff;
     padding: 8px 12px;
     border-radius: 10px;
     display: inline-block;
 }
-
 .input-container {
-    position: absolute; /* Set input container position to absolute */
-    bottom: 20px; /* Adjust as needed */
-    width: 100%; /* Occupy full width of container */
+    display: flex;
+    width: 100%;
 }
-
 .user-input {
-    width: calc(70% - 5px); /* Adjust width to accommodate margin */
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
+    flex: 1;
+    padding: 0.5em;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
 }
-
 .send-btn {
-    width: calc(25% - 5px);
-    padding: 8px;
-    margin-left: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    padding: 0.5em 1em;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid #007BFF;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
+    margin-left: 1em;;
 }
-
 .send-btn:hover {
-    background-color: #0056b3;
+    background-color: #0056B3;
 }
