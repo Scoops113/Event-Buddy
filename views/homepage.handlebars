@@ -39,6 +39,19 @@
             </div>
         </div>
      </div>
+    {{#each events as |event| }}
+        <div class="row align-center mb-5">
+        <div class="col-md-6 col-lg-10 card post" data-eventId={{event.id}}>
+            <div class = "card-header bg-dark">
+            <h4 class="small">{{event.name}}</h4>
+            <h5>{{event.date}} at {{event.time}}</h5>
+            <h5>location: {{event.location}}</h5>
+            <h6>Posted by {{user.name}}</h6>
+            </div>
+            <p class="card-body">{{event.description}}</p>
+        </div>
+        </div>
+    {{/each}}
 
     <!-- Modal -->
     <div class="modal fade" id="postActivityModal" tabindex="-1" aria-labelledby="postActivityModalLabel" aria-hidden="true">
