@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatBox = document.getElementById('chat-box');
     const userInput = document.getElementById('user-input');
@@ -11,9 +13,25 @@ document.addEventListener('DOMContentLoaded', function() {
             userInput.value = '';
             // Here you can add the logic to send the user's message to ChatGPT API and receive a response
             // For now, let's just simulate a bot response
-            setTimeout(function() {
-                const botMessage = 'Whats up! im your event bot 😎';
-                appendMessage(botMessage, 'bot-message');
+            setTimeout(async function() {
+                try {
+                    const response = await fetch('/api/chatbox/', {
+                        method: 'POST',
+                        body: JSON.stringify({ prompt: userMessage }),
+                        headers: { 'Content-Type': 'application/json' },
+                    });
+                  
+                    if (response.ok) {
+                        const data = await response.json();
+                        const botMessage = data.reply;
+                        appendMessage(botMessage, 'bot-message');
+                    } else {
+                        appendMessage('Failed to generate response', 'bot-message');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    appendMessage('Error processing your request', 'bot-message');
+                }
             }, 500);
         }
     });
@@ -36,4 +54,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 });
-
