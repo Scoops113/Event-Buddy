@@ -81,3 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         postContainer.appendChild(postCard);
     }
 });
+
+document.getElementById('search-activities').addEventListener('input', function() {
+    console.log('Searching for activities:', this.value);
+});
