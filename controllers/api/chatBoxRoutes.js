@@ -20,7 +20,6 @@ async function getResponse(prompt) {
         // Extract and return the response content
         if (response.choices && response.choices.length > 0) {
             const reply = response.choices[0].message.content;
-            console.log("Reply:", reply);
             return reply;
         } else {
             console.error("No choices found in the response");

@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('/api/events')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(post => displayPost(post));
-        })
-        .catch(error => console.error('Error:', error));
 
     document.getElementById('post-activity').addEventListener('click', function () {
         $('#postActivityModal').modal('show');
