@@ -1,42 +1,26 @@
 [
   {
-    "name": "Annual Conference",
+    "name": "Kayaking on Lady Bird Lake",
     "date": "2024-06-20",
-    "time": "09:00:00",
-    "location": "Conference Hall A",
-    "description": "A gathering of industry professionals to discuss trends.",
+    "time": "07:00:00 AM",
+    "location": "Lady Bird Lake",
+    "description": "Join us for a peaceful morning of kayaking on the serene waters of Lady Bird Lake. Take in the beautiful views of downtown Austin as we paddle along the lake. Beginners welcome!",
     "user_id": 1
   },
   {
-    "name": "Monthly Meetup",
+    "name": "Hiking at Barton Creek Greenbelt",
     "date": "2024-07-15",
-    "time": "18:00:00",
-    "location": "Local Community Center",
-    "description": "Monthly meetup for local community members.",
+    "time": "8:00:00 AM",
+    "location": "South Austin Greenbelt",
+    "description": "Get ready for an adventurous hike through the scenic trails of Barton Creek Greenbelt. Explore the lush greenery, natural swimming holes, and breathtaking waterfalls. All skill levels are encouraged to join!",
     "user_id": 2
   },
   {
-    "name": "Webinar on Data Science",
+    "name": "Paddleboarding on Lake Travis",
     "date": "2024-08-10",
-    "time": "11:00:00",
-    "location": "Online",
-    "description": "An online webinar covering the basics of data science.",
+    "time": "5:30:00 PM",
+    "location": "Lady Bird Lake",
+    "description": "Experience the thrill of paddleboarding on the expansive waters of Lake Travis. Enjoy the stunning sunset views while gliding across the lake. No experience necessary!",
     "user_id": 3
-  },
-  {
-    "name": "Charity Gala",
-    "date": "2024-09-05",
-    "time": "19:00:00",
-    "location": "Grand Ballroom",
-    "description": "A charity event to raise funds for local schools.",
-    "user_id": 1
-  },
-  {
-    "name": "Startup Pitch Night",
-    "date": "2024-10-12",
-    "time": "17:00:00",
-    "location": "Tech Hub Auditorium",
-    "description": "An event for startups to pitch their ideas to investors.",
-    "user_id": 2
   }
 ]
