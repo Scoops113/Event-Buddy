@@ -39,7 +39,7 @@ router.post('/login', async (req, res) => {
   router.post('/signup', async (req, res) => {
     try {
       // Add new user info to database
-      const userData = await User.create({name: req.body.name, password: req.body.password });
+      const userData = await User.create({name: req.body.name, email: req.body.email, password: req.body.password });
   
       if (!userData) {
         return res.status(400).json({ message: 'Failed to create user' });
