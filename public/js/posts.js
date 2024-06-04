@@ -52,11 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(postData),
       });
-
       if (response.ok) {
         $("#postActivityModal").modal("hide");
-        displayPost(postData);
-      } else {
+        location.reload();
+        } else {
         alert("failed to create post");
       }
     });
