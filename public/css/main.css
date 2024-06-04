@@ -1,0 +1,13 @@
+@media (min-width: 1000px) {
+    .navbar-brand {
+      font-size: 50px;
+      font-family: 'Poetsen One', sans-serif;
+    }
+  }
+  /* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 999.98px) {
+    .navbar-brand {
+      font-size: 30px;
+      font-family: 'Poetsen One', sans-serif;
+    }
+  }
