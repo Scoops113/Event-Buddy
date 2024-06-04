@@ -12,9 +12,8 @@ router.post('/', async (req, res) => {
     if (!eventData) {
       return res.status(400).json({ message: 'Failed to create activity' });
     }
-    console.log(eventData.id)
     
-    
+    res.status(200).json({ message: 'Event Added!' });
 
   } catch (err) {
     console.log(err)
