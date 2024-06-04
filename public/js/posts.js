@@ -60,20 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     );
 
-    function displayPost(post) {
-        const postContainer = document.getElementById('post-container');
-        const postCard = document.createElement('div');
-        postCard.classList.add('card', 'bg-warning', 'mb-3');
-        postCard.innerHTML = `
-            <div class="card-body">
-                <h5 class="card-title">${post.name}</h5>
-                <p class="card-text">${post.description}</p>
-                <p class="card-text"><small>${post.date} at ${post.time}</small></p>
-                <p class="card-text"><small>${post.location}</small></p>
-            </div>
-        `;
-        postContainer.appendChild(postCard);
-    }
 });
 
 document.getElementById('search-activities').addEventListener('input', function() {
