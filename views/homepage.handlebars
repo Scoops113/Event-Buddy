@@ -1,57 +1,60 @@
 
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-4 mb-3">
-                <div class="card bg-warning">
-                    <div class="card-body">
-                        <h5 class="card-title">Find Activities</h5>
-                        <input type="text" class="form-control" id="search-activities" placeholder="Find activities near you">
-                    </div>
+   <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card bg-warning shadow-lg rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title">Find Activities</h5>
+                    <input type="text" class="form-control" id="search-activities" placeholder="Find activities near you">
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <div class="card bg-warning">
-                    <div class="card-body">
-                        <h5 class="card-title">Post an Activity</h5>
-                        <button class="btn btn-primary" id="post-activity">Post an Activity</button>
-                    </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card bg-warning shadow-lg rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title">Post an Activity</h5>
+                    <button class="btn btn-primary" id="post-activity">Post an Activity</button>
                 </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <div class="card bg-warning">
-                    <div class="card-body">
-                        <h5 class="card-title">Get Suggestions</h5>
-                        <div class="card bg-lightblue text-white">
-                            <div class="card-body" id="chat-box">
-                                <div class="chat-message bot-message text-dark"> 
-                                    <span class="message">Event Bot ✌🏼</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-group mt-3">
-                            <input type="text" id="user-input" class="form-control" placeholder="Type a message...">
-                            <div class="input-group-append">
-                                <button id="send-btn" class="btn btn-primary">Send</button>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card bg-warning shadow-lg rounded-lg">
+                <div class="card-body">
+                    <h5 class="card-title">Get Suggestions</h5>
+                    <div class="card bg-lightblue text-white shadow-sm rounded-lg">
+                        <div class="card-body" id="chat-box">
+                            <div class="chat-message bot-message text-dark"> 
+                                <span class="message">Event Bot ✌🏼</span>
                             </div>
                         </div>
                     </div>
+                    <div class="input-group mt-3">
+                        <input type="text" id="user-input" class="form-control" placeholder="Type a message...">
+                        <div class="input-group-append">
+                            <button id="send-btn" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-     </div>
-    {{#each events as |event| }}
-        <div class="row align-center mb-5">
-        <div class="col-md-6 col-lg-10 card post" data-eventId={{event.id}}>
-            <div class = "card-header bg-dark">
-            <h4 class="small">{{event.name}}</h4>
-            <h5>{{event.date}} at {{event.time}}</h5>
-            <h5>location: {{event.location}}</h5>
-            <h6>Posted by {{user.name}}</h6>
+    </div>
+</div>
+{{#each events as |event| }}
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-8 col-lg-6">
+            <div class="card bg-danger shadow-lg rounded-lg" data-eventId={{event.id}}>
+                <div class="card-header bg-warning text-black">
+                    <h4 class="small">{{event.name}}</h4>
+                    <h5>{{event.date}} at {{event.time}}</h5>
+                    <h5>location: {{event.location}}</h5>
+                    <h6>Posted by {{user.name}}</h6>
+                </div>
+                <p class="card-body">{{event.description}}</p>
             </div>
-            <p class="card-body">{{event.description}}</p>
         </div>
-        </div>
-    {{/each}}
+    </div>
+{{/each}}
+
 
     <!-- Modal -->
     <div class="modal fade" id="postActivityModal" tabindex="-1" aria-labelledby="postActivityModalLabel" aria-hidden="true">
