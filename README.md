@@ -21,8 +21,8 @@ EventBuddy aims to make socializing easier by providing a platform where users c
 
 ## Screenshot
 
-
+![Application Preview](assets/images/app_screenshot.png)
 
 ## Link to Deployed Application
 
-Check out the live application here: [EventBuddy]
+Check out the live application here: https://event-buddy.onrender.com/
