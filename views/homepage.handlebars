@@ -1,5 +1,5 @@
 
-   <div class="container mt-4">
+   <div class="container mt-4" id="chatbox-container">
     <div class="row">
         <div class="col-md-4 mb-3">
             <div class="card bg-warning shadow-lg rounded-lg">
@@ -48,6 +48,9 @@
                     <h6>{{event.date}} at {{event.time}}</h5>
                     <h6>location: {{event.location}}</h5>
                     <h6>Posted by {{user.name}}</h6>
+                    <div class="ml-auto">
+                        <button class="btn btn-success "  style="width: 2in; height: 0.5in;">Join</button>
+                    </div>
                 </div>
                 <p class="card-body">{{event.description}}</p>
             </div>
